@@ -45,17 +45,19 @@ namespace WpfApp1
 
         public static void Show()
         {
-            int handle = NativeMethods.FindWindow("IPTIP_Main_Window", "");
-            if (handle <= 0) // nothing found
-            {
-                StartTabTip();
-                Thread.Sleep(100);
-            }
-            // on some devices starting TabTip don't show keyboard, on some does  ¯\_(ツ)_/¯
-            if (!IsOpen())
-            {
-                ToggleVisibility();
-            }
+            //int handle = NativeMethods.FindWindow("IPTIP_Main_Window", "");
+            //if (handle <= 0) // nothing found
+            //{
+            //    StartTabTip();
+            //    Thread.Sleep(100);
+            //}
+            //// on some devices starting TabTip don't show keyboard, on some does  ¯\_(ツ)_/¯
+            //if (!IsOpen())
+            //{
+            //    ToggleVisibility();
+            //}
+
+            StartTabTip();
         }
 
         public static void Hide()

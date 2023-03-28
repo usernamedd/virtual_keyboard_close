@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -89,6 +90,31 @@ namespace WpfApp1
         private void TextBox1_OnGotFocus(object sender, RoutedEventArgs e)
         {
             OnScreenKeyboard.Show();
+        }
+
+        private void ButtonStartup_Click(object sender, RoutedEventArgs e)
+        {
+            Task.Run(() => {
+                while (true)
+                {
+                    try
+                    {
+                        for (int i = 0; i < 20; i++)
+                        {
+                            OnScreenKeyboard.Show();
+                            Thread.Sleep(10);
+                        }
+                        
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                    //Thread.Sleep(1000);
+                    OnScreenKeyboard.Hide();
+                    //Thread.Sleep(1000);
+                }
+            });
         }
     }
 }

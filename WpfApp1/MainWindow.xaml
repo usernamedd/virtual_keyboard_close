@@ -15,5 +15,6 @@
         <TextBox Width="200" Height="199" Background="Aquamarine" Name="TextBox2" 
                  GotFocus="TextBox1_OnGotFocus" LostFocus="TextBox1_OnLostFocus" 
                  Canvas.Left="246" Canvas.Top="43" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
+        <Button Content="启动周期性的启动键盘" Canvas.Left="302" Name="ButtonStartup" Click="ButtonStartup_Click" Canvas.Top="314" Height="46" Width="113"/>
     </Canvas>
 </Window>
